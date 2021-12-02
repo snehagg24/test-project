@@ -10,7 +10,7 @@ platform:
 steps:
 - name: greeting
   commands:
-  - echo "testing triggers"
+  - echo "testing Triggers"
 
 trigger:
   branch:
