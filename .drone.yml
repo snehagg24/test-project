@@ -8,11 +8,10 @@ platform:
   arch: amd64
 
 server:
-  host:
-    from_secret: HOST
+  host: ${{ secrets.HOST }}
   user: root
   ssh_key:
-    from_secret: SSH_KEY
+    from_secret: ${{ secrets.SSH_KEY }}
 
 steps:
 - name: greeting
