@@ -1,16 +1,19 @@
 ---
 kind: pipeline
-type: exec
+type: ssh
 name: default
 
-platform:
-  os: linux
-  arch: amd64
+server:
+  host:
+    from_secret: HOST
+  user: root
+  ssh_key:
+    from_secret: SSH_KEY
 
 steps:
 - name: greeting
   commands:
-  - echo "Testing Triggers........"
+  - echo "Testing ssh runner"
 
 trigger:
   branch:
