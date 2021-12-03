@@ -9,10 +9,9 @@ platform:
 
 steps:
 - name: greeting
-  image: golang:1.12
+  image: ubuntu:20.04
   commands:
-  - go build
-  - go test
+  - echo "testing docker runner"
 
 trigger:
   branch:
