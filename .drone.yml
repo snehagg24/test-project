@@ -1,23 +1,18 @@
 ---
 kind: pipeline
-type: ssh
+type: docker
 name: default
 
 platform:
   os: linux
   arch: amd64
 
-server:
-  host: 
-    from_secret: host
-  user: root
-  ssh_key:
-    from_secret: ssh_key
-
 steps:
 - name: greeting
+  image: golang:1.12
   commands:
-  - echo "Testing ssh runner"
+  - go build
+  - go test
 
 trigger:
   branch:
