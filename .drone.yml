@@ -1,14 +1,11 @@
 ---
 kind: pipeline
-type: kubernetes
+type: docker
 name: default
 
 platform:
   os: linux
-  arch: amd64
-
-metadata:
-  namespace: default
+  arch: ppc64le
 
 steps:
 - name: greeting
