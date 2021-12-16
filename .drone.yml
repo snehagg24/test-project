@@ -5,7 +5,7 @@ name: default
 
 platform:
   os: linux
-  arch: ppc64
+  arch: ppc64le
 
 steps:
 - name: greeting
