@@ -11,7 +11,7 @@ steps:
 - name: greeting
   image: ubuntu:20.04
   commands:
-  - echo "testing docker runner"
+  - echo "testing drone server on power"
 
 trigger:
   branch:
