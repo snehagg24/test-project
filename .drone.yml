@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-type: docker
+type: exec
 name: default
 
 platform:
@@ -9,9 +9,8 @@ platform:
 
 steps:
 - name: greeting
-  image: ubuntu:20.04
   commands:
-  - echo "testing triggers on drone server on power"
+  - echo hello world
 
 trigger:
   branch:
