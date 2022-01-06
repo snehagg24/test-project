@@ -23,7 +23,6 @@ steps:
   image: quay.io/snehakpersistent/drone-git:linux-ppc64le
   commands:
   - git clone https://github.com/snehakpersistent/test-project.git .
-  - git checkout ppc-support-test
 
 - name: greeting
   commands:
