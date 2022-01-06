@@ -16,6 +16,12 @@ server:
     from_secret: ssh_key
 
 steps:
+- name: clone
+  image: quay.io/snehakpersistent/drone-git:linux-ppc64le
+  commands:
+  - git clone https://github.com/snehakpersistent/test-project.git .
+  - git checkout ppc-support-test
+
 - name: greeting
   commands:
   - echo "testing ssh runner on ppc"
