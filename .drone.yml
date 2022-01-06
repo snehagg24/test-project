@@ -1,16 +1,24 @@
 ---
 kind: pipeline
-type: exec
+type: ssh
 name: default
 
 platform:
   os: linux
   arch: ppc64le
 
+server:
+  host:
+    from_secret: host
+  user:
+    from_secret: user
+  ssh_key:
+    from_secret: ssh_key
+
 steps:
 - name: greeting
   commands:
-  - echo hello world
+  - echo "testing ssh runner on ppc"
 
 trigger:
   branch:
