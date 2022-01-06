@@ -1,32 +1,16 @@
 ---
 kind: pipeline
-type: ssh
+type: exec
 name: default
 
 platform:
   os: linux
   arch: ppc64le
 
-server:
-  host:
-    from_secret: host
-  user:
-    from_secret: user
-  password:
-    from_secret: password
-
-clone:
-  disable: true
-
 steps:
-- name: clone
-  image: quay.io/snehakpersistent/drone-git:linux-ppc64le
-  commands:
-  - git clone https://github.com/snehakpersistent/test-project.git .
-
 - name: greeting
   commands:
-  - echo testing ssh runner on power
+  - echo testing exec runner on power
 
 trigger:
   branch:
