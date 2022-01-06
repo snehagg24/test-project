@@ -27,7 +27,7 @@ steps:
 
 - name: greeting
   commands:
-  - echo "testing ssh runner on power"
+  - echo testing ssh runner on power
 
 trigger:
   branch:
