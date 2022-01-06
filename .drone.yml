@@ -15,6 +15,9 @@ server:
   ssh_key:
     from_secret: ssh_key
 
+clone:
+  disable: true
+
 steps:
 - name: clone
   image: quay.io/snehakpersistent/drone-git:linux-ppc64le
