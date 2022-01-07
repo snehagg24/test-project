@@ -7,10 +7,24 @@ platform:
   os: linux
   arch: ppc64le
 
+server:
+  host:
+    from_secret: host
+  user:
+    from_secret: username
+  ssh_key:
+    from_secret: ssh_key
+clone:
+  disable: true
+
 steps:
+- name: clone
+  commands:
+  - git clone https://github.com/snehakpersistent/test-project.git .
+
 - name: greeting
   commands:
-  - echo testing exec runner on power
+  - echo testing ssh runner on power
 
 trigger:
   branch:
