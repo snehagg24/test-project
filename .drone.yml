@@ -11,7 +11,7 @@ server:
   host:
     from_secret: host
   user:
-    from_secret: username
+    from_secret: user
   ssh_key:
     from_secret: ssh_key
 clone:
@@ -24,7 +24,7 @@ steps:
 
 - name: greeting
   commands:
-  - echo testing ssh runner on power
+  - echo hello
 
 trigger:
   branch:
