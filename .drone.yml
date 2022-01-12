@@ -1,19 +1,12 @@
 ---
 kind: pipeline
-type: ssh
+type: kubernetes
 name: default
 
 platform:
   os: linux
   arch: ppc64le
 
-server:
-  host:
-    from_secret: host
-  user:
-    from_secret: user
-  ssh_key:
-    from_secret: ssh_key
 clone:
   disable: true
 
