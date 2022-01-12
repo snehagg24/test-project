@@ -16,6 +16,7 @@ steps:
   - git clone https://github.com/snehakpersistent/test-project.git .
 
 - name: greeting
+  image: ubuntu:latest
   commands:
   - echo hello
 
